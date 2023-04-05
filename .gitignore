@@ -1,0 +1,5 @@
+*.bak
+db/
+incremental_db/
+output_files/
+simulation/modelsim/inout_test_run_msim_rtl_vhdl.do.bak1
