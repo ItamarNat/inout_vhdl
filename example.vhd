@@ -27,6 +27,7 @@ begin
 					data_inout <= data_in; 
 				else
 					data_inout <= 'Z';
+					data_rd <= data_inout;
 				end if;
         end if;
     end process;

@@ -10,6 +10,7 @@ architecture tb_arch of example_tb is
    signal data_out: std_logic;
    signal data_inout: std_logic := '0';
 	signal cs			: std_logic := '0';
+	signal data_rd		: std_logic;
    
    component example
       port (
@@ -17,7 +18,8 @@ architecture tb_arch of example_tb is
          data_in: in std_logic;
          data_out: out std_logic;
          data_inout: inout std_logic;
-			cs			: in std_logic
+			cs			: in std_logic;
+			data_rd	: out std_logic
       );
    end component;
 begin
@@ -27,7 +29,8 @@ begin
          data_in => data_in,
          data_out => data_out,
          data_inout => data_inout,
-			cs => cs
+			cs => cs,
+			data_rd => data_rd
       );
 		
 	clk <= not clk after 10 ns;
